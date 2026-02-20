@@ -1,0 +1,9 @@
+call Stack ->LIFO concept
+
+
+
+
+
+
+
+Global execution

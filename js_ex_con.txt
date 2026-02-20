@@ -1,0 +1,45 @@
+JavaScript execution context
+
+
+
+Global execution context 
+function execution context
+eval execution context
+
+
+{}-> memory creation Phase
+
+  ->execution Phase
+
+
+
+
+1.Global execution context ->this
+2. memory creation Phase
+val1->undefined
+val2->undefined
+addnum->defination
+result1->undefined
+result2->undefined
+
+
+3. execution Phase
+val1->10
+val2->8
+
+addnum -> new environment + execution thread ->delete 
+
+********memory Phase********
+val1->undefined
+val2->undefined
+total->undefined
+
+execution context
+num1=10
+num2-5
+total->15  return in Global execution context
+
+               
+
+
+ 
