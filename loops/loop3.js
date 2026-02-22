@@ -117,60 +117,7 @@ for (const key in programming) {
 
 
 
-//*********For Each**********
-//HIgher Order
-//.foreach,concat etc
-const coding=["js","java","c++","python"]
 
-
-// coding.forEach(function (item) { //parameter ki trh vale laega (item)
-//     console.log(item); // js java c++ python
-    
-// } )
-
-
-//arrow function
-//coding.forEach((item)=>{
-
-  //  console.log(item); // js java c++ python
-
-//})
-
-function printme(item)
-{
-   // console.log(item);
-    
-}
-//coding.forEach(printme); //reference
-
-coding.forEach((item,index,arr)=>{
-   // console.log(item,index,arr);
-    
-})
-
-//For each
-
-const mycoding=[
-    {
-        languagename:"javascript",
-        languagefile:"js"
-    },
-     {
-        languagename:"java",
-        languagefile:"java"
-    },
-     {
-        languagename:"python",
-        languagefile:"py"
-    }
-
-]
-
-mycoding.forEach((item)=>{
-
-    console.log(item.languagefile);//access element
-    
-})
 
 
 
