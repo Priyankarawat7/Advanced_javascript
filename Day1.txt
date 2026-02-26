@@ -1,12 +1,3 @@
+JavaScript Founder name is brendan eich
 
-
-Write a program to create a counter using closure that increments by 1 every time it is called.
-Write a program that demonstrates hoisting difference between var, let, and const.
-Write a program where a function uses call to borrow a method from another object.
-Write a program that prints numbers 1 to 5 with 1-second delay using setTimeout and closure (not let).
-Write a program that shows the difference between arrow function and normal function using this.
-Write a program that creates a Promise which resolves after 2 seconds and logs "Done".
-Write a program using async/await to fetch data from an API and handle errors properly.
-Write a program that demonstrates event loop order using setTimeout, Promise, and console.log.
-Write a program to deep clone a JavaScript object (nested objects included).
-Write a program that implements debouncing for a search input function.
+Active on brave browser

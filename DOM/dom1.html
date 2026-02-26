@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <!-- DOM->Document object Model -->
+      
+    <div class="bg-black">
+        <h1 class="heading" id="heading">DOM Learning on chai or code</h1>
+   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est laudantium minus in fuga perspiciatis? Corrupti neque, at nesciunt explicabo temporibus cum dignissimos ipsam perferendis vel fuga iure quaerat, omnis maxime!</p>
+    </div>
+
+    
+</body>
+</html>
+
+<script>
+    console.log(document.links);//we can use many properties
+//  SELECTORS
+ document.getElementById('heading');
+ 
+</script>
+
+<!-- Examples
+window (object)
+window.document
+console.log(document)
+
+               Window 
+                 |
+                 v
+               Document
+                  |
+                  v
+                   HTML
+                /       \
+               v          v
+              head          body
+            /   /              |
+           v   v                v
+        title   meta          div
+        /        \            /  \
+       v          v          v    v
+    text node   attribute    h1  p->(attribute)
+                              /
+                             v
+                             text node 
+    -->
