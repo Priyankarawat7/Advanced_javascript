@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;" >
+
+
+
+
+    
+</body>
+
+<script>
+   const div= document.createElement('div');
+   console.log(div);
+   div.className="main"
+   div.id=Math.round(Math.random()*10+1);
+    //Generates random number 
+    //  Range: 1–11 (not 1–10)
+    //Assigns it as div id
+    //Can cause duplicate IDs
+    //Slightly incorrect if you wanted 1–10
+
+    div.setAttribute("title","genrate title")
+    div.style.backgroundColor="green";
+    div.style.padding="12px";
+    //div.innerHTML="chai or code"; it will overwrite the value
+ const addText=document.createTextNode('chai or code'); //creates a text node It just exists in memory. 
+    div.appendChild(addText)//Now you attach that text node inside the div.
+    document.body.appendChild(div);//Now you attach that div into the webpage.
+
+
+</script>
+</html>
