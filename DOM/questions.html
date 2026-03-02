@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, voluptatibus!</p>
+    <div class="box" id="box">
+        <h1>i am priyanka</h1>
+        <h5>20 years old</h5>
+        <button id="btn">change button</button>
+       
+    </div> 
+     <button id="show">show</button>
+
+     <ul id="list">
+        <li>c</li>
+        <li>c++</li>
+     </ul>
+     <button id="add">add Item</button>
+
+   
+    
+    
+    
+</body>
+<script>
+    //1. Select a paragraph by its id and change its text to "Hello DOM".
+  // const para= document.getElementById('para');
+    //para.innerHTML="heello";
+    //para.textContent="hello";
+    //para.innerText="pariya";
+
+    //2.Select all elements with class box and change their background color to blue.
+    // const box=document.getElementsByClassName('box')[0];
+    // box.style.backgroundColor="blue";
+    // const boxes=document.querySelectorAll('.box');
+    // boxes.forEach((box)=>{
+    //     box.style.backgroundColor="pink";
+    // })
+
+    //3.Create a button. When clicked, change the page background color.
+//     const button= document.getElementById('btn');
+//     const box=document.getElementById('box');
+//    button.addEventListener("click",()=>{
+//     box.style.backgroundColor="green";
+//     document.body.style.backgroundColor="pink";
+//    })
+
+    //4. Create a div using JavaScript and append it to the body.
+        // const div=document.createElement('div');
+        // div.id='div';
+        // div.className='main';
+        // div.style.backgroundColor="red";
+        // div.style.color='white';
+        // const addText=document.createTextNode('i am priyanka 20 years old');
+        // div.appendChild(addText);
+        // document.body.appendChild(div);
+
+        //5.Change the text of the first <h1> on the page.
+       // const heading=document.querySelector('h1');
+       // heading.textContent="i am bhumi";
+
+      //6. Hide a paragraph when a button is clicked.
+    //   const button=document.getElementById('btn');
+    //   const box=document.getElementById('box');
+    //   button.addEventListener('click',()=>{
+    //     box.style.display='none';
+    //   })
+      //7.Show the paragraph again when another button is clicked.
+    //   const show=document.getElementById('show');
+    //   show.addEventListener('click',()=>{
+    //     box.style.display='block';
+    //   })
+      //8.Add a new <li> item to an existing <ul>.
+    //      
+      const add=document.getElementById('add');
+      const list=document.getElementById('list');
+
+      add.addEventListener('click',()=>{
+        const newlist= document.createElement('li');
+        newlist.textContent='javascript';
+        list.appendChild(newlist);
+
+      })
+
+
+
+
+
+
+    </script>
+</html>
