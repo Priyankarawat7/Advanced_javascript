@@ -37,7 +37,7 @@
 }
 
 h1{
-    padding-top: 40px;
+    padding-top: 30px;
     text-align: center;
     padding-bottom: 30px;
 }
@@ -131,4 +131,79 @@ h2{
     font-size: 18px;
     
     
+}
+
+#result{
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+.contact-section{
+height:700px;
+width:100%;
+background-image:linear-gradient(rgba(29,22,22,0.345),rgba(29,22,22,0.345)),url("cont.jpg");
+background-size:cover;
+display:flex;
+align-items:center;
+justify-content:center;
+background-attachment:fixed;
+}
+.contact-section form h1{
+text-align:center;
+padding-bottom:60px;
+color:white;
+}
+
+
+.contact-section form{ 
+backdrop-filter:blur(5px);
+height:480px; 
+width:40%;
+display:flex;
+justify-content:center;
+/* border-radius:5px; */
+box-shadow: 0 0 0  0.2px;
+flex-direction:column;
+border:2px solid white;
+
+}
+
+
+.contact-section input{
+background-color:transparent;
+height:40px;
+width:80%;
+margin-left:33px;
+margin-bottom:20px;
+ border-radius:10px; 
+border:1px solid white;
+font-size:20px;
+color: white;
+
+
+
+}
+.contact-section label{
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    padding-bottom: 5px;
+}
+.contact-section .btn{
+    height: 40px;
+width:80%;
+margin-left:30px;
+border-radius:15px;
+margin-bottom: 10px;
+
+
+color:black;
+}
+.contact-section .btn:hover{
+background-color:transparent;
+color:white;
+
+
+
 }
