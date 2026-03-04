@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <h2>Amazing Images</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="mountains" src="https://images.pexels.com/photos/16386936/pexels-photo-16386936.jpeg"  alt=""></li>
+            <li><img width="200px" id="girl" src="https://images.pexels.com/photos/34352599/pexels-photo-34352599.jpeg" alt=""></li>
+            <li><img width="200px" id="mahal" src="https://images.pexels.com/photos/34425520/pexels-photo-34425520.jpeg" alt=""></li>
+            <li><img width="200px" id="boxer" src="https://images.pexels.com/photos/36397562/pexels-photo-36397562.jpeg"  alt=""></li>  <!-- onclick="alert('owl')" it's not a feasiable approach if we create event there  (avoid)  -->
+            <li><a style="color:aliceblue ;" href="https://www.google.com/search?gs_ssp=eJzj4tTP1TcwMU02T1JgNGB0YPBiS8_PT89JBQBASQXT&q=google&rlz=1C1CHBF_enIN1064IN1066&oq=goo&gs_lcrp=EgZjaHJvbWUqGAgBEC4YQxiDARjHARixAxjRAxiABBiKBTIGCAAQRRg5MhgIARAuGEMYgwEYxwEYsQMY0QMYgAQYigUyDAgCECMYJxiABBiKBTIMCAMQABhDGIAEGIoFMgwIBBAAGEMYgAQYigUyDwgFEAAYQxixAxiABBiKBTIPCAYQABhDGLEDGIAEGIoFMg8IBxAAGEMYsQMYgAQYigUyDwgIEAAYQxixAxiABBiKBTIHCAkQABiPAtIBCTI0NThqMGoxNagCCLACAfEF0-0HN1j2s9Q&sourceid=chrome&ie=UTF-8" id="google">Google</a></li>
+            </ul>
+
+    </div>
+    
+</body>
+<script>
+    // 2nd approach it's not gives us that much features
+    // document.getElementById('boxer').onclick= function(){
+    //     alert('boxer clicked')
+    // }
+
+
+    // 3rd approach it's a best approach we use this approach in our umcomings projects
+
+      // attachEvent()  it is used in earlier time
+    // jQuery= on (event listener)
+
+
+     //  types, timestamp, defaultPrevented,
+    //target,toElement,srcElement,currentTarget
+    // clientX, clientY,screenX,screenY
+    // altkey,ctrlkey,shiftkey,keycode
+
+
+    // document.getElementById('boxer').addEventListener('click',()=>{
+    //     alert('owl clicked again')
+    // },false) //3rd parameter event propagation
+
+    //bubbling-> bottom to top (images-> li ->ul) if we give false value in 3rd parameter
+    // capturing-> top to bottom  if we give true value
+
+    //  document.getElementById('images').addEventListener('click',(e)=>{
+    //    console.log("click inside the ul");
+       
+    //  },false) //true
+
+    //    document.getElementById('boxer').addEventListener('click',(e)=>{
+    //    console.log("boxer clicked");
+    //    e.stopPropagation();//using this event will not bubble
+       
+    //  },false)  //true
+
+    //  document.getElementById('google').addEventListener('click',(e)=>{
+    //       e.preventDefault();
+    //     console.log('google');
+    //  },false)
+
+
+    // mini  project
+
+   const images= document.getElementById('images').addEventListener('click',(e)=>{
+
+    console.log(e.target.parentNode);
+    console.log(e.target.tagName);
+    if(e.target.tagName==='IMG')
+   {
+    console.log(e.target.id);
+    
+    let removeIt=e.target.parentNode;
+    removeIt.remove()  //when we click in images it will remove image   
+
+   }
+   },false);
+
+   // removeIt.parentNode.removeChild(removeIt);
+
+
+   
+   
+  
+
+</script>
+
+</html>
