@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="navbar">
+        Project 4 Digital Clock
+    </div>
+    <div class="nav-links">
+        <a href="project1.html">Color Switcher</a>
+        <a href="project2.html">BMI Generator</a>
+        <a href="project3.html">Form</a>
+        <a href="project4.html">Digital Clock</a>
+         <a href="project5.html">Guess the Number</a>
+
+
+    </div>
+
+    <h1>Digital Clock</h1>
+
+
+    <div class="center">
+        <div id="banner"><span>Your local Time</span></div>
+    <div id="clock" ></div>
+    </div>
+    
+</body>
+<script>
+
+   const clock= document.getElementById('clock');
+  // console.log(clock);
+  
+   
+   setInterval(() => {
+     let date=new Date();
+  // console.log(date.toLocaleTimeString());
+    clock.innerHTML=date.toLocaleTimeString                                ()
+    
+   }, 1000);
+
+</script>
+
+</html>
