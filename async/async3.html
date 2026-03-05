@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>Chai or javascript</h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+</body>
+<script>
+ 
+
+//   const sayDate=()=>{
+//      console.log('priyanka',Date.now());   
+//   }
+//  setInterval(sayDate,1000,"hi");
+
+
+//   const sayDate=(str)=>{
+//      console.log(str,Date.now());   
+//   }
+//  const intervalstop=setInterval(sayDate,1000,"hi");//we can pass parameter also
+// clearInterval(intervalstop);
+
+
+
+// example
+
+
+// const stop=()=>{
+//       document.querySelector('h1').innerHTML='stop the button';
+// }
+// const stoptext=setInterval(stop, 2000);
+
+//  const stopbutton= document.getElementById('stop').addEventListener('click',()=>{
+   
+//     clearInterval(stoptext);
+//     console.log("stopped");
+
+//  })
+
+
+ 
+ 
+
+// const start=()=>{
+//       document.querySelector('h1').innerHTML='start the button';
+// }
+// const starttext=setInterval(start, 2000);
+
+// const startbutton=document.getElementById('start').addEventListener('click',()=>{
+     
+//         console.log("start");
+
+//         })
+
+let intervalId;
+
+document.getElementById("start").addEventListener("click", () => {
+
+    intervalId = setInterval(() => {
+        document.querySelector("h1").innerHTML = "Start the button";
+        console.log("running...");
+    }, 2000);
+
+});
+
+document.getElementById("stop").addEventListener("click", () => {
+
+    clearInterval(intervalId);
+    document.querySelector("h1").innerHTML = "Stopped";
+    console.log("stopped");
+
+});
+
+</script>
+</html>

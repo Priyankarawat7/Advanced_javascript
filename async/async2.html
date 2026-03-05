@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai or code</h1>
+    <button id="stop">stop</button>
+    
+</body>
+<script>
+
+    // setTimeout(() => { 
+    //     console.log("priyanka");   
+    // }, 2000); //2sec baad chlega (once)
+
+
+    // setInterval(() => {
+    //     console.log("rawwat");   
+    // }, 2000); //2sec baad kaam krta jaega repeat pr
+
+
+    // const Saypriyanka=()=>{
+    //     console.log("priyanka");      
+    // }
+      // setTimeout(Saypriyanka,2000)
+
+
+    //   example
+    const changeText= ()=>{
+           document.querySelector('h1').innerHTML="i am developer"
+    }
+    const changeMe=setTimeout(changeText,2000) //reference
+   const button= document.getElementById('stop').addEventListener('click',()=> {
+       clearTimeout(changeMe)
+       console.log("stopped");
+       
+   })
+ 
+ 
+</script>
+</html>

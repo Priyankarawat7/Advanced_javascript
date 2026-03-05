@@ -1,0 +1,30 @@
+<!-- ASYNC -->
+
+
+javascript 
+     -> Synchronus ->one by one kaam
+     -> single threaded -> one thread pr sb executed hoga compartively slower then other languages
+
+     (DEfault javascript)
+
+->Execution Context
+            |
+            ->   execute one line of code at a time     
+
+            |
+ (thread)   |->console log-> 1
+            |                     (each operation waits for the last one to complete before executing)
+            |->console log->2
+            |
+            |
+                    (callstack)    (memory heap)
+
+
+    (for database) Blocking code        VS   Non-blocking    (sync and async)       
+               |                        |
+               V                        |    
+                                        |         
+          block the flow of program     |    Does not bock the execution
+                                        |
+           real file Sync               |     Read File Async
+                                        |
