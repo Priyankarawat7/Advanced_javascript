@@ -28,53 +28,44 @@
 
 
 // example
+let  intervalId;
 
-
-// const stop=()=>{
-//       document.querySelector('h1').innerHTML='stop the button';
-// }
-// const stoptext=setInterval(stop, 2000);
-
-//  const stopbutton= document.getElementById('stop').addEventListener('click',()=>{
-   
-//     clearInterval(stoptext);
-//     console.log("stopped");
-
-//  })
-
-
- 
- 
-
-// const start=()=>{
-//       document.querySelector('h1').innerHTML='start the button';
-// }
-// const starttext=setInterval(start, 2000);
-
-// const startbutton=document.getElementById('start').addEventListener('click',()=>{
-     
-//         console.log("start");
-
-//         })
-
-let intervalId;
-
-document.getElementById("start").addEventListener("click", () => {
-
-    intervalId = setInterval(() => {
-        document.querySelector("h1").innerHTML = "Start the button";
-        console.log("running...");
+const startyrr=()=>{
+  intervalId=  setInterval(() => {
+        console.log('Running....');
+        
+        
     }, 2000);
 
-});
+}
+const stopyrr=()=>{
 
-document.getElementById("stop").addEventListener("click", () => {
+    clearInterval(intervalId)
+    console.log('stop....');
+    
 
-    clearInterval(intervalId);
-    document.querySelector("h1").innerHTML = "Stopped";
-    console.log("stopped");
+}
+const stop=document.getElementById('stop').addEventListener('click',stopyrr)
+const start=document.getElementById('start').addEventListener('click',startyrr)
 
-});
+// let intervalId;
+
+// document.getElementById("start").addEventListener("click", () => {
+
+//     intervalId = setInterval(() => {
+//         document.querySelector("h1").innerHTML = "Start the button";
+//         console.log("running...");
+//     }, 2000);
+
+// });
+
+// document.getElementById("stop").addEventListener("click", () => {
+
+//     clearInterval(intervalId);
+//     document.querySelector("h1").innerHTML = "Stopped";
+//     console.log("stopped");
+
+// });
 
 </script>
 </html>
