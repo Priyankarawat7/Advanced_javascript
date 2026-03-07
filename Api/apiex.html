@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body{
+    background:black;
+    font-family:Arial, Helvetica, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:white;
+}
+
+.card{
+    background:#111;
+    width:300px;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 0 15px rgba(255,255,255,0.1);
+}
+
+.card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:3px solid white;
+    margin-bottom:15px;
+}
+
+.name{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.email{
+    font-size:14px;
+    color:lightgray;
+    margin-top:5px;
+}
+
+.location{
+    margin-top:10px;
+    font-size:14px;
+    color:#bbb;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 15px;
+    border:none;
+    border-radius:6px;
+    background:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+    </style>
+</head>
+<body style="background-color: black; color: aliceblue;">
+
+    
+<!-- get photo, create a card where user click the button where user can get the data  -->
+
+<div class="card">
+
+<img id="profileImg" src="" alt="profile">
+
+<div class="name" id="name">Loading...</div>
+
+<div class="email" id="email"></div>
+
+<div class="location" id="location"></div>
+
+<button id="cbtn">New User</button>
+
+</div>
+
+
+
+</body>
+<script>
+
+
+    const requestURL='https://randomuser.me/api/'
+ const xhr= new XMLHttpRequest()
+  xhr.open('GET',requestURL)
+xhr.onreadystatechange=function(){
+
+ if(xhr.readyState===4)
+ {
+   const data=JSON.parse(this.responseText);
+   
+
+ const btn= document.getElementById('cbtn').addEventListener('click',()=>{
+       const image= document.getElementById('profileImg').src=data.results[0].picture.large
+    const name= document.getElementById('name').innerHTML=data.results[0].name.first
+    const email= document.getElementById('email').innerHTML=data.results[0].email
+    const location= document.getElementById('location').innerHTML=data.results[0].login.username
+
+    
+  //console.log( document.getElementById('profileImg').innerHTML=data.results[0].picture.large);
+  //  console.log( document.getElementById('name').innerHTML=data.results[0].name.first);
+  //   console.log(document.getElementById('email').innerHTML=data.results[0].email);
+    //   console.log( document.getElementById('location').innerHTML=data.results[0].login.username);
+    
+     // console.log(data.results[0].name.first);
+ });
+
+   
+ }
+    
+    
+ }
+
+
+
+ 
+ 
+
+xhr.send()
+
+ 
+
+</script>
+</html>
