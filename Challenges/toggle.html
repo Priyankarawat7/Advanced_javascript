@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    
+    <div class="box" id="box" >
+      <!-- Dark mode  <h1></h1> -->
+
+    </div>
+
+    
+    
+    
+</body>
+
+<script>
+
+let box=document.getElementById('box');
+let heading=box.querySelector('h1')
+
+ box.addEventListener('click',()=>{
+
+    function toggle(){
+
+        if(box.style.backgroundColor==="black")
+    {
+       box.style.backgroundColor="white";
+        box.style.color="black"
+        box.innerHTML="light Mode"
+    }
+        else{
+             box.style.backgroundColor="black";
+        box.style.color="white"
+         box.innerHTML="dark Mode"
+            
+        }
+    }
+toggle()
+
+
+ })
+
+</script>
+</html>

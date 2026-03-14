@@ -1,0 +1,14 @@
+  #box{
+            height: 400px;
+            width: 400px;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .light{
+             background:white;
+            color:black;
+        }
