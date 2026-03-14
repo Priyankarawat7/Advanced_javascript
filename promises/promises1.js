@@ -118,7 +118,7 @@
 const promiseFive=new Promise((resolve,reject)=>{
 
     setTimeout(() => {
-        let error =true
+        let error =false
 
         if(!error){
             resolve({
@@ -141,26 +141,66 @@ const promiseFive=new Promise((resolve,reject)=>{
 
 // async will  wait few jb tk kaam ho jata then it will 
 // go futher otherwise it will give error
-async function ConsumePromiseFive() {
+// async function ConsumePromiseFive() {
 
-    try {
-         const response= await promiseFive
-   console.log(response);
+//     try {
+//          const response= await promiseFive
+//    console.log(response);
         
-    } catch (error) {
+//     } catch (error) {
 
-        console.log(error);
-        
-        
-    }
-  
+//         console.log(error);   
+//     }
    
+// }
+
+//  ConsumePromiseFive()
+
+
+//******** */ method  6**************
+
+// async function getAllUsers() {
+ 
+//     try {
+//          const response=  await fetch('https://randomuser.me/api/')
     
-}
+//          //console.log(response);
+         
+//         const data= await response.json()
+//         console.log(data);
+        
+//     } catch (error) {
+//         console.log('E:',error);    
+        
+//     }
+ 
+// }
 
-ConsumePromiseFive()
+//getAllUsers()
 
 
+// ***********different method********
+
+fetch('https://randomuser.me/api/')
+.then((response)=>{
+    return response.json
+
+}).then((data)=>{
+    console.log(data);
+    
+    
+})
+.catch((error )=>{
+    console.log(error);
+    
+
+})
+.finally(()=>{
+    console.log('consumed');
+    
+})
+
+ 
 
 
 
