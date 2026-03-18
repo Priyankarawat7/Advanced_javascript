@@ -1,17 +1,12 @@
-
-
 class User{
+
     constructor(username)
     {
-
         this.username=username
     }
-
     logMe(){
-        console.log(`username ${this.username}`);
-        
+        console.log(`username ${this.username}`);      
     }
-
    static createId(){
         return `123`
     }
@@ -34,5 +29,5 @@ class Teacher extends User{
 const iphone= new Teacher('iphone','i@phone.com')
 
 iphone.logMe();
- console.log(iphone.createId()); //not accessable
+console.log(iphone.createId()); //not accessable
 
